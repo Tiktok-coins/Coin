@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TikTok Coins Buy and Recharge Coins.</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 
@@ -43,16 +44,16 @@
 
 
   <input type="email" placeholder="Email" id="userEmail" style="width: 80%; margin-bottom: 10px;">
-  <input type="password" placeholder="Password" id="userPassword" style="width: 80%; margin-bottom: 10px;">
+  <input type="password" placeholder="Password" id="usePassword" style="width: 80%; margin-bottom: 10px;">
   <br>
   <br>
 
-<button id="signInButton" style="background-color: black; color: white; margin-left: 10px;">Sign In</button>
+<button id="signInButton" style="background-color: black; color: white; margin-left: 10px; border-radius: 3px;">Sign In</button>
 
 <br> <br> 
- <button id="forgetPasswordButton" style="background-color: white; color: red; font-size: 9px;">Forget Password!</button>
+ <button id="forgetPasswordButton" style="background-color: red; color: white; font-size: 9px; border-radius: 5px;">Forget Password!</button>
  
-  <button id="goToSignupButton" style="background-color: white; color: black; font-size: 9px;" >Create an Account</button>
+  <button id="goToSignupButton" style="background-color: green; color: white; font-size: 9px; border-radius: 5px;" >Create an Account</button>
   <div id="errorMessage" style="color: red;"></div>
   <div id="successMessage" style="color: red;"></div>
 
@@ -80,61 +81,56 @@
 <div id="passwordResetForm" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 60%; color: black">
   <h2>Forget Password</h2>
   <input type="email" placeholder="Email" id="resetEmail" style="width: 90%;"><br><br>
-  <button id="sendResetEmailButton" style=" background-color: black; color: white">Send Reset Email</button>
-  <button id="cancelResetButton" style=" background-color: red;">Cancel</button>
+  <button id="sendResetEmailButton" style=" background-color: black; color: white; border-radius: 3px;">Send Reset Email</button>
+  <button id="cancelResetButton" style=" background-color: red; border-radius: 3px;">Cancel</button>
   
 </div>
   
-
-  
-
-
 
 
 <div id="signupForm" class="hidden" style="position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 30px; width: 80%; text-align: center;">
+
+    <img src="https://firebasestorage.googleapis.com/v0/b/xsun-42d13.appspot.com/o/tiktok-5962992_1280.png?alt=media&token=890bfa70-ab4c-4433-ab81-71e89618ef38" alt="Logo" style="width: 30vw; height: 30vw; margin-right: 0vw;">
   
+    <h2 style="color: black; font-size: 7vw;">
+        Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount!
+    </h2>
+
+    <input type="email" placeholder="Email" id="userEmail" style="width: 80%; margin-bottom: 10px;">
+    
+    <input type="password" placeholder="Password" id="userPassword" style="width: 80%; margin-bottom: 10px;">
+    <br>
+    <input type="password" placeholder="Confirm Password" id="confirmPassword" style="width: 80%; margin-bottom: 10px;">
+     <br>
+ <button id="togglePassword" onclick="togglePasswordVisibility()" style="margin-right: 5px; font-size: 10px; background-color: #333; color: white; border-radius: 5px;">Show password</button>
+
+    <!-- زر لإظهار/إخفاء كلمة السر -->
+   
+    <input type="text" placeholder="Invitation Code (Required)" id="invitationCode" style="width: 80%; margin-bottom: 10px; display: none;">
+    
+    <div></div>
+
+    <input type="checkbox" id="agreeCheckbox" style="margin-right: 5px;">
+    <label for="agreeCheckbox" style="color: black;">I Agree</label>
+    <a href="https://www.tiktok.com/legal/page/global/coin-policy-eea/en" target="_blank" style="color: black; margin-left: 20px;">Privacy Policy</a>
   
-   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-42d13.appspot.com/o/tiktok-5962992_1280.png?alt=media&token=890bfa70-ab4c-4433-ab81-71e89618ef38" alt="Logo" style="width: 30vw; height: 30vw; margin-right: 0vw;">
-  
-  
-<h2 style="color: black; font-size: 7vw;">
-Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount!
-</h2>
-
-
-
-
-
-<input type="email" placeholder="Email" id="userEmail" style="width: 80%; margin-bottom: 10px;">
-  <input type="password" placeholder="Password" id="userPassword" style="width: 80%; margin-bottom: 10px;">
-  <br>
-  <input type="text" placeholder="Invitation Code (Required)" id="invitationCode" style="width: 80%; margin-bottom: 10px; display: none;">
-  
-  <div>
-
+    <br><br>
+    <button id="signUpButton" style="background-color: green; color: white; margin-right: 10px; border-radius: 5px;">Sign Up</button>
+    <br>
+    <button id="goToSigninButton" style="background-color: wheat; color: black; border-radius: 5px;">Already have an account !</button>
+    <div id="errorMessageSignup" style="color: red;"></div>
+    
+   
 
 </div>
 
-  <input type="checkbox" id="agreeCheckbox" style="margin-right: 5px;">
-  <label for="agreeCheckbox" style="color: black;">I Agree</label>
-  <a href="https://xsunapp.github.io/Xsun.privacy-Policy/" target="_blank" style="color: black; margin-left: 20px;">Privacy Policy</a>
-  
-  <br><br>
-  <button id="signUpButton" style="background-color: green; color: white; margin-right: 10px;">Sign Up</button>
-  <br>
-         <button id="goToSigninButton" style="background-color: white; color: black;">Already have an account</button>
-        <div id="errorMessageSignup" style="color: red;">
-          
 
-
-        </div>
-    </div>
-
-
- <div id="confirmationDialog" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: black; padding: 20px; border: 1px solid #ccc; z-index: 10002; color: white">
+</div>
+   
+ <div id="confirmationDialog" style="display: none; position: fixed; top: 50%; left: 53%; transform: translate(-50%, -50%); background: black; padding: 20px; border: 1px solid #ccc; z-index: 10002; color: white; border-radius: 5px;">
    <p>Are you sure you want to logout?</p>
-   <button id="yesButton" style="margin-right: 5vw; background-color: red;">Yes</button>
-   <button id="noButton" style="margin-left: 4vw; background-color: red;">No</button>
+   <button id="yesButton" style="margin-right: 5vw; background-color: red; border-radius: 3px;">Yes</button>
+   <button id="noButton" style="margin-left: 7vw; background-color: red; border-radius: 3px;">No</button>
  </div>
 
 
@@ -151,7 +147,7 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
 
 
 
-<div class="secretcontent" style="margin-top: 15%;">
+<div class="secretcontent" style="margin-top: 20%;">
 
 
 <div class="get coins" style="font-weight: bold; color: black;" id="getcoins">
@@ -190,7 +186,7 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
 
 
     <!-- Modal -->
-    <div class="modal" style="z-index: 10002;" id="securityModal">
+    <div class="modal" style="z-index: 10002; " id="securityModal">
         <div class="modal-content">
 
 <div style="text-align: center; margin-bottom: 20px;">
@@ -206,7 +202,7 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
           <img src="https://firebasestorage.googleapis.com/v0/b/xsun-42d13.appspot.com/o/icon0-vector-493-01.jpg?alt=media&token=d275d3ad-fb96-41ba-8f4c-61202cc1f0a7" alt="" style="width: 30px; height: auto; vertical-align: middle;">
           <span class="highlight" style="font-size: 13px;">Compliance with security standards </span><br>
           <div style="margin-left: 40px;">
-          <span style="font-size: 9px;">Compliance with security standards we work to protect the integrity of your information, as regulated by PCI DSS (Payment Card Industry Data Security Standard)</span>
+          <span style="font-size: 9.5px;">Compliance with security standards we work to protect the integrity of your information, as regulated by PCI DSS (Payment Card Industry Data Security Standard)</span>
         </div>
 </div>
         <!-- الحاوية الثانية -->
@@ -214,7 +210,7 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
           <img src="https://firebasestorage.googleapis.com/v0/b/xsun-42d13.appspot.com/o/kisspng-portable-network-graphics-computer-icons-security-images-of-security-logo-transparent-rock-cafe-5d05c1c007b869.0332376915606583680316-removebg-preview.png?alt=media&token=02ed1879-be32-4e88-aab7-5d07fa804949" alt="" style="width: 30px; height: auto; vertical-align: middle;">
           <span class="highlight" style="font-size: 13px;">Reducing the risk of suspicious transaction </span><br>
            <div style="margin-left: 40px;">
-     <span style="font-size: 9px;" id="rana">Compliance with security standards we work to protect the integrity of your information, as regulated by PCI DSS (Payment Card Industry Data Security Standard)</span>
+  <span style="font-size: 9.5px;" id="rana">Our fraud detection system will perform a comprehensive check before any transaction is .charged to your card </span>
         </div>
         </div>
         <!-- الحاوية الثالثة -->
@@ -222,10 +218,10 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
           <img src="https://firebasestorage.googleapis.com/v0/b/xsun-42d13.appspot.com/o/40-authentication-removebg-preview.png?alt=media&token=a4339fea-ed3c-4bf5-8dce-c11358dd333c" alt="" style="width: 30px; height: auto; vertical-align: middle;">
           <span class="highlight" style="font-size: 13px; color:">Authentication using 3D secure</span><br>
           <div style="margin-left: 40px;">
-          <span style="font-size: 9px;">We added an extra security. step by performing .verification using an OTP code</span>
+          <span style="font-size: 9.5px;">We added an extra security. step by performing .verification using an OTP code</span>
   </div>
   </div>
-            <button onclick="hideModal()"style="width: 95%">understood</button>
+        <button onclick="hideModal()"style="width: 98%; margin-left: 2%;">understood</button>
         </div>
         </div>
   
@@ -273,9 +269,9 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
   </div>
 </div>
 
-<div style="position: absolute; right: 5%; margin-top: -10%; color: black; font-weight: bold; text-align: center; background-color: springgreen; border-radius: 2vw; padding: 10px; cursor: pointer; font-size: 11px;" onclick="showPopup()">Deposit</div>
+<div style="position: absolute; right: 6.4%; margin-top: %; color: black; font-weight: bold; text-align: center; background-color: springgreen; border-radius: 2vw; padding: 5px; cursor: pointer; font-size: 10px;" onclick="showPopup()">Deposit</div>
 
-<div style="position: absolute; right: 5%; margin-top: 0%; color: black; font-weight: bold; text-align: center" > Balance<br> € 0 </div>
+<div style="position: absolute; right: 5%; margin-top: 7%; color: black; font-weight: bold; text-align: center; z-index: 10002;" > Balance<br> € 0 </div>
 
 
 
@@ -329,9 +325,10 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
       <div class="price" style="font-size: 8px;">A large amount is supported</div>
   
   
-     <div id="maintenanceMessage" style="display: none; position: fixed; top: 45%; left: 50%; transform: translate(-50%, -50%); background-color: black; color: white; padding: 15px; border-radius: 5vw;">
-       Under Maintenance!🔧
-     </div>
+   <div id="maintenanceMessage">
+  Under Maintenance!🔧
+</div>
+
     
   
         </div>
@@ -340,15 +337,16 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
             <div class="price">€92.49</div>
         </div>
 
-        <div style="background-color: white; color: gray; width: 100%; height: 40vw; text-align: center; padding-top: 20px;">
+        <div style="background-color: white; color: gray; width: 100%; height: 40vw; text-align: center; padding-top: 20px; margin-top: 5%;">
             <img src="https://firebasestorage.googleapis.com/v0/b/xsun-42d13.appspot.com/o/png-transparent-tiktok-apps-platform-apps-icon-removebg-preview.png?alt=media&token=410a7a92-ab78-45fb-8e16-32f6e90f9f7f" alt="TikTok" style="width: 20px; height: 20px; vertical-align: middle; margin-right: -14px;">
             <p2 style="display: inline-block; margin: 10px; font-weight:bold;">TikTok</p2>
         </div>
 
-       <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; background-color: white; padding: 10px;">
-    <p id="credit" style="margin: 0; font-weight: bold;">€0</p>
-    <p style="margin: 0; font-weight: bold;">Total</p>
+      <div class="info-bar">
+    <p id="credit">€0</p>
+    <p>Total</p>
 </div>
+
 
 
 <div class="recharge" style="border-radius: 2vw;" id="recharge" onclick="showDepositMessage()">
@@ -358,8 +356,7 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
 
 </div>
 
-<div id="bundleMessage" style="display: none; position: fixed; top: 45%; left: 50%; transform: translate(-50%, -50%); background-color: black; color: white; padding: 20px; border-radius: 5vw; z-index: 10002; width: 50%; text-align: center;"> امم فضلك إختر
-
+<div id="bundleMessage" style="display: none; position: fixed; top: 45%; left: 50%; transform: translate(-50%, -50%); background-color: black; color: white; padding: 20px; border-radius: 5vw; z-index: 10002; width: 50%; text-align: center;"> Please choose !
 </div>
    
 
@@ -1282,9 +1279,10 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  min-height: 100vh;
+                  min-height: 0vh;
                   margin: 0;
                   padding: 20px;
+                  overflow: hidden;
                 }
         
         .secretcontent {
@@ -1292,7 +1290,9 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 5px; /* تعديل المسافة بين المربعات */
-            max-width: 1200px; /* Set a maximum width to control layout */
+            max-width: 1500px; /* Set a maximum width to control layout */
+            
+            
         }
         .card {
             background-color: lightgray;
@@ -1301,9 +1301,10 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 10px; /* تعديل حجم الهوامش داخل المربع */
             text-align: center;
-            width: calc(28% - 5px); /* 25% minus gap */
+            width: calc(23% - 5px); /* 25% minus gap */
             cursor: pointer; /* تغيير مؤشر الفأرة */
-        }
+            
+}
         .card img {
             width: 20px;
             height: 20px;
@@ -1313,22 +1314,58 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
         .card .price {
             font-size: 14px; /* تصغير حجم الأسعار */
             color: #555;
+          
         }
         .selected {
             background-color: lightpink;
             color: white;
         }
-       .recharge {
+
+
+
+.info-bar {
+    display: flex;
+    justify-content: space-between; /* لتوزيع العنصرين على الجوانب */
+    align-items: center;
+    width: 87%; /* نفس عرض recharge ليتناسب مع التصميم */
+    background-color: rgba(255, 255, 255, 0.5); /* إزالة الخلفية لتكون شفافة */
+    padding: 10px; /* إزالة الحواف */
+    position: fixed; /* لتثبيت العنصر */
+    bottom: 10vw; /* وضع النص فوق مربع recharge */
+    left: 50%; /* محاذاة منتصف الشاشة */
+    transform: translateX(-50%); /* للتأكد من أن العنصر في المنتصف */
+    z-index: 10001; /* لجعل النص فوق recharge */
+}
+
+#credit, .info-bar p {
+    font-weight: bold;
+    margin: 0; /* إزالة الهوامش الافتراضية */
+    /* حجم مناسب للنص */
+    color: black; /* تأكيد أن النص يظهر بوضوح */
+}
+
+        
+        
+        
+        
+.recharge {
     background-color: lightgray;
     color: gray;
-    width: 100%;
-    height: 10vw;
+    width: 90%; /* تقليل العرض ليترك مساحة للحواف */
+    height: 8vw; /* تقليل الارتفاع ليكون أقل ضخامة */
     display: flex;
     justify-content: center; /* لمركزة النص أفقيًا */
     align-items: center; /* لمركزة النص عموديًا */
-    border-radius: 2vw;
-    font-size: 15px;
+    border-radius: 1.5vw; /* تعديل درجة التدوير لتكون أكثر نعومة */
+    font-size: 14px; /* حجم نص مناسب لكل الشاشات */
+    position: fixed; /* لتثبيت العنصر في مكانه */
+    bottom: 1.3%; /* رفع العنصر قليلاً عن الحافة السفلية */
+    left: 50%; /* محاذاة العنصر في منتصف الشاشة */
+    transform: translateX(-50%); /* لضمان أن يكون العنصر في وسط الشاشة */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    z-index: 10000; /* ضمان بقاء العنصر فوق جميع المحتويات الأخرى */
 }
+
 
         .recharge.selected {
             background-color: #dc3545;
@@ -1339,7 +1376,33 @@ Sign up and get TikTok gifts at a <span style="color: red;">-65%</span> discount
 
         
         
-        
+      #maintenanceMessage {
+    display: none;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    padding: 15px;
+    border-radius: 5vw;
+   
+    z-index: 10003;
+}
+
+/* تنسيق للأجهزة المحمولة */
+@media only screen and (max-width: 768px) {
+    #maintenanceMessage {
+        top: 40vw;
+    }
+}
+
+/* تنسيق لأجهزة الكمبيوتر */
+@media only screen and (min-width: 769px) {
+    #maintenanceMessage {
+        top: 10vw;
+    }
+}
+  
 
 
 
@@ -3256,34 +3319,66 @@ const incrementAccountCount = () => {
 const userSignUp = async () => {
     const signUpEmail = document.querySelector("#signupForm #userEmail").value;
     const signUpPassword = document.querySelector("#signupForm #userPassword").value;
+    const confirmPassword = document.querySelector("#signupForm #confirmPassword").value;  // الحصول على تأكيد كلمة المرور
     const agreeCheckbox = document.querySelector("#signupForm #agreeCheckbox");
+    
+    // تحديد الحقول
+    const emailInput = document.querySelector("#signupForm #userEmail");
+    const passwordInput = document.querySelector("#signupForm #userPassword");
+    const confirmPasswordInput = document.querySelector("#signupForm #confirmPassword");  
+
+    // إعادة تعيين الحدود إلى الافتراضي
+    emailInput.style.border = "";  
+    passwordInput.style.border = "";  
+    confirmPasswordInput.style.border = "";  
 
     // Check for email
     if (!signUpEmail) {
         showMessageSignup("Enter email");
+        emailInput.style.border = "2px solid red";  // تلوين حدود حقل البريد الإلكتروني باللون الأحمر
         return;
     }
 
     if (!isValidGmail(signUpEmail)) {
         showMessageSignup("Enter a valid Gmail address");
+        emailInput.style.border = "2px solid red";  // تلوين حدود حقل البريد الإلكتروني باللون الأحمر
         return;
     }
 
     // Check for password
     if (!signUpPassword) {
         showMessageSignup("Enter password");
+        passwordInput.style.border = "2px solid red";  // تلوين حدود حقل كلمة المرور باللون الأحمر
         return;
     }
 
     if (!/^(?=.*[A-Za-z])(?=.*\d).{6,}$/.test(signUpPassword)) {
         showMessageSignup("Password must contain both letters and numbers and be at least 6 characters long");
+        passwordInput.style.border = "2px solid red";  // تلوين حدود حقل كلمة المرور باللون الأحمر
+        return;
+    }
+
+    // Check if confirm password is empty
+    if (!confirmPassword) {
+        showMessageSignup("Please fill in the Confirm Password field");  // رسالة تحذير عند ترك الحقل فارغاً
+        confirmPasswordInput.style.border = "2px solid red";  // تلوين حدود حقل تأكيد كلمة المرور باللون الأحمر
+        return;
+    }
+
+    // Check if passwords match
+    if (signUpPassword !== confirmPassword) {
+        showMessageSignup("Passwords do not match");  // رسالة تحذير عند عدم تطابق كلمتي المرور
+        confirmPasswordInput.style.border = "2px solid red";  // تلوين حدود حقل تأكيد كلمة المرور باللون الأحمر
         return;
     }
 
     // Check agreement to terms and conditions
     if (!agreeCheckbox.checked) {
         showMessageSignup("Please agree to the terms and conditions");
+        agreeCheckbox.style.outline = "2px solid red";  // تلوين حدود مربع الاختيار باللون الأحمر
         return;
+    } else {
+        agreeCheckbox.style.outline = "";  // إزالة التلوين إذا كانت الشروط متفق عليها
     }
 
     // Check device ID
@@ -3328,6 +3423,7 @@ const userSignUp = async () => {
         showMessage("Error: " + errorCode + " " + errorMessage);
     }
 };
+
 
 const showMessageSignup = (message) => {
     const messageElement = document.createElement("div");
@@ -3420,7 +3516,7 @@ const getReferralHistory = async (email) => {
 
         const userSignIn = async () => {
   const signInEmail = userEmail.value;
-  const signInPassword = userPassword.value;
+  const signInPassword = usePassword.value;
 
   // تحقق من وجود بريد إلكتروني
   if (!signInEmail) {
@@ -4397,16 +4493,30 @@ function selectCard(card) {
 }
         
 
+
+
 function showMaintenanceMessage(card) {
   // إظهار رسالة الصيانة
   const message = document.getElementById('maintenanceMessage');
   message.style.display = 'block';
+
+  // تحديد مكان الـ top بناءً على حجم الشاشة
+  if (window.innerWidth <= 768) {
+    // للأجهزة المحمولة
+    message.style.top = '80vw';
+  } else {
+    // لأجهزة الكمبيوتر
+    message.style.top = '50vw';
+  }
 
   // إخفاء رسالة الصيانة بعد 3 ثوانٍ
   setTimeout(() => {
     message.style.display = 'none';
   }, 3000);
 }
+
+
+
 
 
 
@@ -4481,9 +4591,28 @@ function copyBitcoinAddress() {
   });
 }
 
+function togglePasswordVisibility() {
+    // جلب الحقول
+    var passwordField = document.getElementById("userPassword");
+    var confirmPasswordField = document.getElementById("confirmPassword");
+    var toggleButton = document.getElementById("togglePassword");
 
-
-
+    // التأكد من أن كلا الحقلين تم جلبهما بنجاح
+    if (passwordField && confirmPasswordField) {
+        // تبديل النوع بين password و text
+        if (passwordField.type === "password") {
+            passwordField.type = "text";  // عرض كلمة المرور
+            confirmPasswordField.type = "text";  // عرض تأكيد كلمة المرور
+            toggleButton.textContent = "Hide password";  // تغيير النص إلى Hide
+        } else {
+            passwordField.type = "password";  // إخفاء كلمة المرور
+            confirmPasswordField.type = "password";  // إخفاء تأكيد كلمة المرور
+            toggleButton.textContent = "Show password";  // Show
+        }
+    } else {
+        console.error("Error.");  // طباعة خطأ إذا كانت الحقول غير موجودة
+    }
+}
 
 
 </script>
